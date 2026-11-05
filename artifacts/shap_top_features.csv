@@ -1,0 +1,11 @@
+,mean_abs_shap_log_odds
+num__tenure,1.0594828655773367
+num__MonthlyCharges,0.7293712657750961
+num__TotalCharges,0.4205578796579348
+cat__InternetService_Fiber optic,0.3920507613560145
+cat__Contract_Month-to-month,0.3236603930080177
+cat__InternetService_DSL,0.29916451489873513
+cat__Contract_Two year,0.29883117155985095
+cat__StreamingMovies_Yes,0.14893348720851843
+cat__StreamingTV_Yes,0.14232812730911087
+cat__PaperlessBilling_No,0.13872859127988268

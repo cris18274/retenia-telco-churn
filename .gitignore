@@ -1,0 +1,20 @@
+# Python runtime and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+Thumbs.db
+# Streamlit credentials (DO NOT COMMIT)
+.streamlit/secrets.toml
+# IDE/local caches
+.vscode/
+.idea/
+# These are intentionally tracked: artifacts/*.joblib, artifacts/*.npy,
+# artifacts/*.csv, the public teaching dataset, and the reproducible notebook.

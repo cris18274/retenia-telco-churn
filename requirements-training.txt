@@ -1,0 +1,7 @@
+# Only required when running RetenIA_Notebook_Completo.ipynb.
+-r requirements.txt
+optuna>=3.5
+matplotlib>=3.8
+jupyterlab>=4.0
+nbformat>=5.9
+nbclient>=0.10

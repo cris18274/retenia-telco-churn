@@ -1,0 +1,371 @@
+{
+  "dataset_n": 7043,
+  "calibration": {
+    "brier_score_test": 0.16879804712145743,
+    "mean_predicted_score_test": 0.41574688369859436,
+    "observed_churn_rate_test": 0.2654364797728886,
+    "mean_predicted_score_top10": 0.873534873544248,
+    "observed_churn_rate_top10": 0.75177304964539
+  },
+  "churn_rate": 0.2653698707936959,
+  "n_train": 5634,
+  "n_test": 1409,
+  "cv_model_comparison": [
+    {
+      "modelo": "Regresion logistica",
+      "tiempo_cv_s": 0.19,
+      "cv_accuracy": 0.8032,
+      "cv_precision": 0.6557,
+      "cv_recall": 0.5445,
+      "cv_f1": 0.5949,
+      "cv_roc_auc": 0.8458
+    },
+    {
+      "modelo": "Random Forest",
+      "tiempo_cv_s": 1.59,
+      "cv_accuracy": 0.7961,
+      "cv_precision": 0.6561,
+      "cv_recall": 0.4876,
+      "cv_f1": 0.5592,
+      "cv_roc_auc": 0.8349
+    }
+  ],
+  "search_comparison": [
+    {
+      "estrategia": "Bayesiano TPE",
+      "cv_f1": 0.6298,
+      "tiempo_s": 3.42,
+      "configuraciones": 24,
+      "folds": 3,
+      "parametros": "{'C': 1.3047177725867953, 'class_weight': 'balanced', 'fit_intercept': False}"
+    },
+    {
+      "estrategia": "Grid Search",
+      "cv_f1": 0.6292,
+      "tiempo_s": 3.59,
+      "configuraciones": 24,
+      "folds": 3,
+      "parametros": "{'C': 0.1, 'class_weight': 'balanced', 'fit_intercept': True}"
+    },
+    {
+      "estrategia": "Random Search",
+      "cv_f1": 0.6291,
+      "tiempo_s": 3.34,
+      "configuraciones": 24,
+      "folds": 3,
+      "parametros": "{'C': np.float64(0.13489373196232501), 'class_weight': 'balanced', 'fit_intercept': False}"
+    }
+  ],
+  "selected_strategy": "Bayesiano TPE",
+  "selected_parameters": {
+    "C": 1.3047177725867953,
+    "class_weight": "balanced",
+    "fit_intercept": false
+  },
+  "test": {
+    "accuracy": 0.7388218594748048,
+    "precision": 0.5051724137931034,
+    "recall": 0.7834224598930482,
+    "f1": 0.6142557651991615,
+    "roc_auc": 0.8414296416853961,
+    "confusion_matrix": [
+      [
+        748,
+        287
+      ],
+      [
+        81,
+        293
+      ]
+    ],
+    "n_test": 1409,
+    "model": "Regresión logística",
+    "winning_strategy": "Bayesiano TPE",
+    "prob_threshold": 0.5
+  },
+  "pareto_trials": 32,
+  "pareto_front_size": 21,
+  "pareto_sec": 3.9440066290000004,
+  "pareto_selected": {
+    "trial": 11,
+    "cv_f1": 0.6262407141580294,
+    "contact_rate": 0.2912673056443025,
+    "C": 0.04203965712872512,
+    "class_weight": null,
+    "fit_intercept": true,
+    "threshold": 0.39519819845795867
+  },
+  "shap_global_top": [
+    [
+      "num__tenure",
+      1.0594828655773367
+    ],
+    [
+      "num__MonthlyCharges",
+      0.7293712657750961
+    ],
+    [
+      "num__TotalCharges",
+      0.4205578796579348
+    ],
+    [
+      "cat__InternetService_Fiber optic",
+      0.3920507613560145
+    ],
+    [
+      "cat__Contract_Month-to-month",
+      0.3236603930080177
+    ],
+    [
+      "cat__InternetService_DSL",
+      0.29916451489873513
+    ],
+    [
+      "cat__Contract_Two year",
+      0.29883117155985095
+    ],
+    [
+      "cat__StreamingMovies_Yes",
+      0.14893348720851843
+    ],
+    [
+      "cat__StreamingTV_Yes",
+      0.14232812730911087
+    ],
+    [
+      "cat__PaperlessBilling_No",
+      0.13872859127988268
+    ]
+  ],
+  "rf_global_top": [
+    [
+      "num__tenure",
+      0.14313270045705592
+    ],
+    [
+      "num__TotalCharges",
+      0.13823825823429
+    ],
+    [
+      "num__MonthlyCharges",
+      0.11318125254174258
+    ],
+    [
+      "cat__Contract_Month-to-month",
+      0.06673440271775646
+    ],
+    [
+      "cat__OnlineSecurity_No",
+      0.041676502222313803
+    ],
+    [
+      "cat__PaymentMethod_Electronic check",
+      0.03628763683143628
+    ],
+    [
+      "cat__InternetService_Fiber optic",
+      0.035951845307717396
+    ],
+    [
+      "cat__TechSupport_No",
+      0.03279849248468881
+    ],
+    [
+      "cat__Contract_Two year",
+      0.028179485817317277
+    ],
+    [
+      "cat__OnlineBackup_No",
+      0.022191081854899573
+    ]
+  ],
+  "cases": [
+    {
+      "case": 1,
+      "p_churn": 0.9379252963492624,
+      "actual_churn": 1,
+      "shap_log_odds": [
+        [
+          "num__tenure",
+          1.5725969001934823
+        ],
+        [
+          "num__MonthlyCharges",
+          -0.7455741268446003
+        ],
+        [
+          "num__TotalCharges",
+          -0.5308387118396167
+        ],
+        [
+          "cat__InternetService_Fiber optic",
+          0.374332362847881
+        ],
+        [
+          "cat__Contract_Month-to-month",
+          0.3236603930080188
+        ],
+        [
+          "cat__InternetService_DSL",
+          0.1862191511957262
+        ],
+        [
+          "cat__StreamingMovies_Yes",
+          0.17447403754697416
+        ],
+        [
+          "cat__Contract_Two year",
+          0.16644002235192265
+        ],
+        [
+          "cat__StreamingTV_Yes",
+          0.16397249689989757
+        ]
+      ],
+      "lime_probability_effects": [
+        [
+          "num__tenure",
+          0.2492013440133125
+        ],
+        [
+          "num__MonthlyCharges",
+          -0.10457580749746548
+        ],
+        [
+          "cat__InternetService_Fiber optic",
+          0.06488330591477934
+        ],
+        [
+          "num__TotalCharges",
+          -0.050871496592392866
+        ],
+        [
+          "cat__Contract_Month-to-month",
+          0.044990557350948875
+        ],
+        [
+          "cat__StreamingTV_Yes",
+          0.03293898554164288
+        ],
+        [
+          "cat__MultipleLines_Yes",
+          0.02742880837354843
+        ],
+        [
+          "cat__OnlineBackup_No internet service",
+          0.025286072565580207
+        ],
+        [
+          "cat__InternetService_No",
+          0.02449571944915983
+        ],
+        [
+          "cat__OnlineSecurity_Yes",
+          0.024195797738714934
+        ]
+      ],
+      "lime_method": "LIME metodológico (alternativa local)",
+      "lime_local_fidelity": 0.39706138322724194
+    },
+    {
+      "case": 2,
+      "p_churn": 0.005567391748811273,
+      "actual_churn": 0,
+      "shap_log_odds": [
+        [
+          "num__tenure",
+          -1.7435414993829137
+        ],
+        [
+          "num__MonthlyCharges",
+          1.3541034310482878
+        ],
+        [
+          "cat__Contract_Two year",
+          -0.6261315126572329
+        ],
+        [
+          "cat__InternetService_Fiber optic",
+          -0.40552672641853776
+        ],
+        [
+          "cat__Contract_Month-to-month",
+          -0.3236603930080188
+        ],
+        [
+          "num__TotalCharges",
+          -0.27147482405451656
+        ],
+        [
+          "cat__DeviceProtection_No internet service",
+          -0.25183411353767426
+        ],
+        [
+          "cat__OnlineBackup_No internet service",
+          -0.25183411353767426
+        ],
+        [
+          "cat__TechSupport_No internet service",
+          -0.25183411353767426
+        ]
+      ],
+      "lime_probability_effects": [
+        [
+          "num__tenure",
+          -0.12204135806834508
+        ],
+        [
+          "num__MonthlyCharges",
+          0.06168014044820157
+        ],
+        [
+          "cat__Contract_Two year",
+          -0.04528421349082898
+        ],
+        [
+          "cat__Contract_Month-to-month",
+          -0.028982511043297986
+        ],
+        [
+          "cat__StreamingMovies_No internet service",
+          -0.024814613821237917
+        ],
+        [
+          "cat__InternetService_Fiber optic",
+          -0.02436022174280113
+        ],
+        [
+          "cat__Dependents_Yes",
+          -0.019497545682658247
+        ],
+        [
+          "cat__InternetService_No",
+          -0.015267435286399336
+        ],
+        [
+          "cat__PaymentMethod_Bank transfer (automatic)",
+          -0.01444522929674306
+        ],
+        [
+          "cat__DeviceProtection_No internet service",
+          -0.012447434416536047
+        ]
+      ],
+      "lime_method": "LIME metodológico (alternativa local)",
+      "lime_local_fidelity": 0.3669885664790168
+    }
+  ],
+  "scenario": {
+    "annual_margin_saved_usd": 360,
+    "contact_cost_usd": 4,
+    "hypothetical_success_given_would_churn": 0.2,
+    "license_fee_usd_per_campaign": 249,
+    "contacted": 141,
+    "expected_churn_without_action_top10": 123.16841716973896,
+    "hypothetical_avoided_churn": 24.633683433947795,
+    "hypothetical_gross_contribution_usd": 8868.126036221205,
+    "hypothetical_contact_cost_usd": 564,
+    "hypothetical_net_after_fee_usd": 8055.126036221205
+  },
+  "explanation_caveat": "SHAP log-odds vs LIME local probability; differences expected; observational feature relevance not causation"
+}

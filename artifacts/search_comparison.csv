@@ -1,0 +1,4 @@
+estrategia,cv_f1,tiempo_s,configuraciones,folds,parametros
+Bayesiano TPE,0.6298,3.42,24,3,"{'C': 1.3047177725867953, 'class_weight': 'balanced', 'fit_intercept': False}"
+Grid Search,0.6292,3.59,24,3,"{'C': 0.1, 'class_weight': 'balanced', 'fit_intercept': True}"
+Random Search,0.6291,3.34,24,3,"{'C': np.float64(0.13489373196232501), 'class_weight': 'balanced', 'fit_intercept': False}"
