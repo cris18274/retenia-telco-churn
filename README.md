@@ -46,7 +46,6 @@ Abrir `RetenIA_Notebook_Completo.ipynb` en Jupyter y ejecutar de arriba a abajo 
 | `explain_utils.py` | LIME oficial si está instalado; alternativa pedagógica explícita |
 | `artifacts/` | Modelos completos, métricas, frente, figuras, ranking demostrativo |
 | `Presentacion_Comercial_RetenIA.pptx`/`.pdf` | Cinco diapositivas para el business pitch |
-| `Guion_y_Defensa_Comercial_RetenIA.pdf` | Discurso de 2 min, objeciones y cierre de 1 min |
 
 ## Resultados técnicos (único test, 1.409 muestras)
 
@@ -70,6 +69,5 @@ Este paquete incluye el contraste corregido en las tarjetas de métricas, tema c
 - Para despliegue: `pip install -r requirements.txt`.
 - Para repetir notebook: `pip install -r requirements-training.txt`.
 - Para validar modelos exportados: `python scripts/check_artifacts.py`.
-- **Guía detallada de publicación:** [PUBLICAR_EN_GITHUB_Y_STREAMLIT.md](PUBLICAR_EN_GITHUB_Y_STREAMLIT.md).
 - La versión de `scikit-learn` está fijada a 1.8.0 para compatibilidad con los modelos guardados.
 - Los enlaces públicos deben completarse con las URLs reales luego de publicar.
