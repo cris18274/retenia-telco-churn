@@ -62,7 +62,7 @@ Abrir `RetenIA_Notebook_Completo.ipynb` en Jupyter y ejecutar de arriba a abajo 
 > ¿Qué aporta RetenIA? Ordena los clientes según probabilidad estimada de abandono y ayuda a justificar a quién contactar primero, antes de invertir en ofertas indiscriminadas.
 
 
-## Versión preparada para la entrega GitHub / Streamlit
+## Versión final
 
 Este paquete incluye el contraste corregido en las tarjetas de métricas, tema claro, dependencias de la app separadas de las de entrenamiento y una prueba de artefactos.
 
